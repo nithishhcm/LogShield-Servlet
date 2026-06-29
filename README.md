@@ -1,3 +1,8 @@
+![Java](https://img.shields.io/badge/Java-17-orange)
+![Jetty](https://img.shields.io/badge/Jetty-Embedded-blue)
+![SQLite](https://img.shields.io/badge/SQLite-Database-green)
+![Log4j2](https://img.shields.io/badge/Log4j2-Security-red)
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 # LogShield-Servlet — Log4j2 Web Application with Embedded SQLite & Jetty
 
 LogShield-Servlet is a lightweight, high-performance Java Servlet web application demonstrating a zero-install deployment architecture. This project showcases a premium dark glassmorphism user authentication portal backed by an embedded SQLite database, running an internal Jetty servlet container, and utilizing advanced Apache Log4j2 audit log isolation to split operational telemetry from security footprints.
