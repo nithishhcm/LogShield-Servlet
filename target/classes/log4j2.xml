@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Log4j2 configuration — Log4j2 Web Application (Sign-Up / Login Demo)
+
+    Appenders:
+      1. ConsoleAppender      → prints to terminal (all events)
+      2. RollingFileAppender  → logs/app.log (server + app events only)
+      3. AuthFileAppender     → logs/auth.log (auth events ONLY — isolated)
+
+    Loggers:
+      com.example.UserService → AuthFileAppender + Console, additivity=false
+                                (auth events NEVER reach app.log)
+      Root (INFO)             → ConsoleAppender + RollingFileAppender
+-->
+<Configuration status="WARN">
+
+    <Appenders>
+
+        <!-- ── 1. Console Appender ─────────────────────────────────────────
+             Writes every log event to stdout so you can watch the terminal.
+             Pattern includes thread name so you can trace concurrent requests.
+        -->
+        <Console name="ConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%t] [%logger{30}] - %msg%n%throwable"/>
+        </Console>
+
+        <!-- ── 2. RollingFile Appender (app.log) ──────────────────────────
+             Captures all Root-level events: server startup, Jetty info, etc.
+             Auth events (UserService) are excluded because that logger has
+             additivity="false" → they never propagate up to Root.
+        -->
+        <RollingFile name="RollingFileAppender"
+                     fileName="logs/app.log"
+                     filePattern="logs/app-%d{yyyy-MM-dd}-%i.log.gz"
+                     immediateFlush="true">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%t] [%logger{30}] - %msg%n%throwable"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="7"/>
+        </RollingFile>
+
+        <!-- ── 3. Auth File Appender (auth.log) ───────────────────────────
+             DEDICATED to com.example.UserService authentication events.
+             Captures:
+               INFO  — successful register / login
+               WARN  — duplicate username, wrong password, blank fields
+               ERROR — database exception during auth (with full stack trace)
+               FATAL — would appear here if routed, but FATAL is logged
+                       directly in WebApp for DB-unavailable scenarios.
+
+             The [AUTH] marker in the pattern makes grepping easy:
+               grep "\[AUTH\]" logs/auth.log
+
+             immediateFlush="true" ensures every auth event hits disk
+             immediately — critical for security auditing.
+        -->
+        <File name="AuthFileAppender"
+              fileName="logs/auth.log"
+              append="true"
+              immediateFlush="true">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [AUTH] [%logger{30}] - %msg%n%throwable"/>
+        </File>
+
+        <!-- ── 4. Error + Fatal File Appender (errors.log) ────────────────
+             Captures ONLY ERROR and FATAL events from all loggers.
+             Provides a focused error-only view for quick alerting.
+             ThresholdFilter ensures lower-level events are rejected.
+        -->
+        <File name="ErrorFileAppender"
+              fileName="logs/errors.log"
+              append="true"
+              immediateFlush="true">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [ERROR-LOG] [%logger{30}] - %msg%n%throwable"/>
+            <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+        </File>
+
+    </Appenders>
+
+    <Loggers>
+
+        <!-- ── Dedicated Auth Logger (com.example.UserService) ───────────────
+             name        → must exactly match LogManager.getLogger(UserService.class)
+                           which resolves to "com.example.UserService"
+             level       → DEBUG so every auth path is captured
+             additivity  → FALSE — THE ISOLATION KEY:
+                           auth events stop here and NEVER reach Root logger,
+                           so they will NOT appear in app.log
+             AppenderRefs:
+               ConsoleAppender — operators see auth events in real-time
+               AuthFileAppender — persists events to logs/auth.log ONLY
+               ErrorFileAppender — ERROR/FATAL auth events also go to errors.log
+        -->
+        <Logger name="com.example.UserService" level="DEBUG" additivity="false">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="AuthFileAppender"/>
+            <AppenderRef ref="ErrorFileAppender"/>
+        </Logger>
+
+        <!-- ── Servlet loggers (RegisterServlet, LoginServlet) ───────────────
+             These capture WARN-level malformed request warnings.
+             They propagate to Root (additivity=true by default).
+        -->
+        <Logger name="com.example.RegisterServlet" level="WARN" additivity="true"/>
+        <Logger name="com.example.LoginServlet"    level="WARN" additivity="true"/>
+
+        <!-- ── Root Logger ───────────────────────────────────────────────────
+             Catches everything not handled by a dedicated Logger above.
+             INFO threshold: TRACE and DEBUG from Jetty/SQLite are suppressed
+             to keep app.log readable.
+             Sends to ConsoleAppender + RollingFileAppender (app.log).
+             Also sends ERROR+ to ErrorFileAppender.
+        -->
+        <Root level="INFO">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="RollingFileAppender"/>
+            <AppenderRef ref="ErrorFileAppender"/>
+        </Root>
+
+    </Loggers>
+
+</Configuration>

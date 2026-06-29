@@ -1,0 +1,157 @@
+2026-06-29 09:48:43.925 INFO  [com.example.App] - INFO: Application started successfully.
+2026-06-29 09:48:43.933 WARN  [com.example.App] - WARN: Config file not found — falling back to default settings.
+2026-06-29 09:48:43.934 ERROR [com.example.App] - ERROR: Failed to connect to remote service. Will retry in 5 seconds.
+2026-06-29 09:48:43.934 FATAL [com.example.App] - FATAL: Out of memory — shutting down immediately.
+2026-06-29 09:48:43.934 ERROR [com.example.App] - Caught an ArithmeticException while dividing numbers.
+java.lang.ArithmeticException: / by zero
+	at com.example.App.divide(App.java:130)
+	at com.example.App.main(App.java:91)
+2026-06-29 09:48:43.942 INFO  [com.example.App] - User 'Alice' (id=42) logged in successfully.
+2026-06-29 09:48:43.943 INFO  [com.example.App] - Application shutting down. Goodbye!
+2026-06-29 10:38:55.007 INFO  [com.example.App] - === Interactive Log4j2 Demo started ===
+2026-06-29 10:38:55.009 INFO  [com.example.App] - Commands: warn/error/fatal/debug/trace: <message>  |  just text = INFO  |  'exit' to quit
+2026-06-29 10:38:55.010 WARN  [com.example.App] - WARN  is working — this line will appear on console AND in logs/app.log
+2026-06-29 10:38:55.010 ERROR [com.example.App] - ERROR is working — this line will appear on console AND in logs/app.log
+2026-06-29 10:38:55.011 FATAL [com.example.App] - FATAL is working — this line will appear on console AND in logs/app.log
+2026-06-29 10:39:18.037 INFO  [com.example.App] - User executed action: debug
+2026-06-29 10:39:23.037 INFO  [com.example.App] - User executed action: h
+2026-06-29 10:39:25.941 INFO  [com.example.App] - User executed action: error
+2026-06-29 10:39:27.697 INFO  [com.example.App] - User executed action: warn
+2026-06-29 10:39:28.879 WARN  [com.example.App] - Shutdown command received by user. Exiting now.
+2026-06-29 10:39:28.880 INFO  [com.example.App] - === Application shut down cleanly ===
+2026-06-29 10:58:09.179 INFO  [com.example.App] - === Interactive Log4j2 Demo started ===
+2026-06-29 10:58:09.182 INFO  [com.example.App] - Commands: warn/error/fatal/debug/trace: <message>  |  just text = INFO  |  'exit' to quit
+2026-06-29 10:58:09.182 WARN  [com.example.App] - WARN  is working — this line will appear on console AND in logs/app.log
+2026-06-29 10:58:09.183 ERROR [com.example.App] - ERROR is working — this line will appear on console AND in logs/app.log
+2026-06-29 10:58:09.183 FATAL [com.example.App] - FATAL is working — this line will appear on console AND in logs/app.log
+2026-06-29 10:58:11.770 INFO  [com.example.App] - User executed action: p
+2026-06-29 10:58:12.293 INFO  [com.example.App] - User executed action: e
+2026-06-29 10:58:12.640 INFO  [com.example.App] - User executed action: e
+2026-06-29 10:58:12.862 INFO  [com.example.App] - User executed action: e
+2026-06-29 10:58:13.056 INFO  [com.example.App] - User executed action: e
+2026-06-29 10:58:14.278 WARN  [com.example.App] - Shutdown command received by user. Exiting now.
+2026-06-29 10:58:14.278 INFO  [com.example.App] - === Application shut down cleanly ===
+2026-06-29 11:04:05.346 INFO  [com.example.App] - === Interactive Log4j2 Demo started ===
+2026-06-29 11:04:05.348 INFO  [com.example.App] - Commands: warn/error/fatal/debug/trace: <message>  |  just text = INFO  |  'exit' to quit
+2026-06-29 11:04:05.348 WARN  [com.example.App] - WARN  is working — this line will appear on console AND in logs/app.log
+2026-06-29 11:04:05.349 ERROR [com.example.App] - ERROR is working — this line will appear on console AND in logs/app.log
+2026-06-29 11:04:05.349 FATAL [com.example.App] - FATAL is working — this line will appear on console AND in logs/app.log
+2026-06-29 11:04:09.200 INFO  [com.example.App] - User executed action: hello
+2026-06-29 11:04:12.510 INFO  [com.example.App] - User executed action: wrror
+2026-06-29 11:04:14.232 INFO  [com.example.App] - User executed action: error
+2026-06-29 11:04:40.097 WARN  [com.example.App] - [THRESHOLD] Resource usage at 75% — message: 'msg'. (2 more consecutive warn(s) before auto-escalation to ERROR)
+2026-06-29 11:04:50.516 WARN  [com.example.App] - [THRESHOLD] Resource usage at 90% — message: 'msg'. (1 more consecutive warn(s) before auto-escalation to ERROR)
+2026-06-29 11:04:53.562 ERROR [com.example.App] - [ESCALATION] WARN→ERROR after 3 consecutive warnings. Triggering message: 'msg'. System treating repeated warnings as unresolved issue.
+2026-06-29 11:04:57.076 WARN  [com.example.App] - [THRESHOLD] Resource usage at 75% — message: 'msg'. (2 more consecutive warn(s) before auto-escalation to ERROR)
+2026-06-29 11:05:11.030 ERROR [com.example.App] - [CIRCUIT-BREAKER] Error #1 recorded — message: 'msg'. (2 error(s) remaining before FATAL shutdown)
+java.lang.RuntimeException: Simulated exception for: msg
+	at com.example.App.main(App.java:180)
+2026-06-29 11:05:15.299 ERROR [com.example.App] - [CIRCUIT-BREAKER] Error #2 recorded — message: ',sg'. (1 error(s) remaining before FATAL shutdown)
+java.lang.RuntimeException: Simulated exception for: ,sg
+	at com.example.App.main(App.java:180)
+2026-06-29 11:05:22.590 ERROR [com.example.App] - [CIRCUIT-BREAKER] Error #3 recorded — message: 'hello'. (0 error(s) remaining before FATAL shutdown)
+java.lang.RuntimeException: Simulated exception for: hello
+	at com.example.App.main(App.java:180)
+2026-06-29 11:05:22.591 FATAL [com.example.App] - [CIRCUIT-BREAKER TRIPPED] FATAL: 3 cumulative errors exceeded safety threshold. Initiating emergency shutdown sequence.
+2026-06-29 11:05:22.591 INFO  [com.example.App] - === Application shut down cleanly ===
+2026-06-29 11:14:06.965 INFO  [com.example.WebApp.main()] [com.example.WebApp] - === Log4j2 Web Application starting ===
+2026-06-29 11:14:06.971 INFO  [com.example.WebApp.main()] [com.example.DatabaseManager] - Initialising SQLite database at: jdbc:sqlite:logs/users.db
+2026-06-29 11:14:07.555 INFO  [com.example.WebApp.main()] [com.example.DatabaseManager] - Database connection established successfully.
+2026-06-29 11:14:07.560 INFO  [com.example.WebApp.main()] [com.example.DatabaseManager] - Table 'users' is ready (created or already exists).
+2026-06-29 11:14:07.701 INFO  [com.example.WebApp.main()] [com.example.WebApp] - Server started successfully on http://localhost:8080
+2026-06-29 11:14:07.702 INFO  [com.example.WebApp.main()] [com.example.WebApp] - Press Ctrl+C to stop the server.
+2026-06-29 11:20:24.013 INFO  [com.example.WebApp.main()] [com.example.WebApp] - === Log4j2 Web Application starting ===
+2026-06-29 11:20:24.020 INFO  [com.example.WebApp.main()] [com.example.DatabaseManager] - Initialising SQLite database at: jdbc:sqlite:logs/users.db
+2026-06-29 11:20:24.160 INFO  [com.example.WebApp.main()] [com.example.DatabaseManager] - Database connection established successfully.
+2026-06-29 11:20:24.163 INFO  [com.example.WebApp.main()] [com.example.DatabaseManager] - Table 'users' is ready (created or already exists).
+2026-06-29 11:20:24.282 ERROR [com.example.WebApp.main()] [com.example.WebApp] - Server encountered an unrecoverable error and is shutting down.
+java.io.IOException: Failed to bind to 0.0.0.0/0.0.0.0:8080
+	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:349)
+	at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:310)
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+	at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:234)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:401)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+	at com.example.WebApp.main(WebApp.java:72)
+	at org.codehaus.mojo.exec.ExecJavaMojo.doMain(ExecJavaMojo.java:385)
+	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:374)
+	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:296)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: java.net.BindException: Address already in use: bind
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:522)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:335)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:297)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:344)
+	... 11 more
+2026-06-29 11:20:24.282 INFO  [com.example.WebApp.main()] [com.example.WebApp] - === Log4j2 Web Application stopped ===
+2026-06-29 11:21:21.244 INFO  [com.example.WebApp.main()] [com.example.WebApp] - === Log4j2 Web Application starting ===
+2026-06-29 11:21:21.251 INFO  [com.example.WebApp.main()] [com.example.DatabaseManager] - Initialising SQLite database at: jdbc:sqlite:logs/users.db
+2026-06-29 11:21:21.369 INFO  [com.example.WebApp.main()] [com.example.DatabaseManager] - Database connection established successfully.
+2026-06-29 11:21:21.372 INFO  [com.example.WebApp.main()] [com.example.DatabaseManager] - Table 'users' is ready (created or already exists).
+2026-06-29 11:21:21.471 ERROR [com.example.WebApp.main()] [com.example.WebApp] - Server encountered an unrecoverable error and is shutting down.
+java.io.IOException: Failed to bind to 0.0.0.0/0.0.0.0:8080
+	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:349)
+	at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:310)
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+	at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:234)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:401)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:73)
+	at com.example.WebApp.main(WebApp.java:72)
+	at org.codehaus.mojo.exec.ExecJavaMojo.doMain(ExecJavaMojo.java:385)
+	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:374)
+	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:296)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: java.net.BindException: Address already in use: bind
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:522)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:335)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:297)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:344)
+	... 11 more
+2026-06-29 11:21:21.472 INFO  [com.example.WebApp.main()] [com.example.WebApp] - === Log4j2 Web Application stopped ===
+2026-06-29 11:24:22.237 INFO  [com.example.WebApp.main()] [com.example.WebApp] - === Log4j2 Web Application starting ===
+2026-06-29 11:24:22.242 INFO  [com.example.WebApp.main()] [com.example.DatabaseManager] - Initialising SQLite database at: jdbc:sqlite:logs/users.db
+2026-06-29 11:24:22.382 INFO  [com.example.WebApp.main()] [com.example.DatabaseManager] - Database connection established successfully.
+2026-06-29 11:24:22.384 INFO  [com.example.WebApp.main()] [com.example.DatabaseManager] - Table 'users' is ready (created or already exists).
+2026-06-29 11:24:22.532 INFO  [jetty-server] [com.example.WebApp] - Server started successfully on http://localhost:8080
+2026-06-29 11:24:41.021 INFO  [com.example.WebApp.main()] [com.example.WebApp] - [CONSOLE] Listed 3 user(s) from the database.
+2026-06-29 11:24:41.023 INFO  [com.example.WebApp.main()] [com.example.WebApp] - Console: exit command received. Stopping server.
+2026-06-29 11:24:41.037 INFO  [com.example.WebApp.main()] [com.example.WebApp] - === Log4j2 Web Application stopped ===
+2026-06-29 11:28:26.168 INFO  [com.example.WebApp.main()] [com.example.WebApp] - === Log4j2 Web Application starting ===
+2026-06-29 11:28:26.176 INFO  [com.example.WebApp.main()] [com.example.DatabaseManager] - Initialising SQLite database at: jdbc:sqlite:logs/users.db
+2026-06-29 11:28:26.308 INFO  [com.example.WebApp.main()] [com.example.DatabaseManager] - Database connection established successfully.
+2026-06-29 11:28:26.311 INFO  [com.example.WebApp.main()] [com.example.DatabaseManager] - Table 'users' is ready (created or already exists).
+2026-06-29 11:28:26.460 INFO  [jetty-server] [com.example.WebApp] - Server started successfully on http://localhost:8080
+2026-06-29 11:29:47.893 INFO  [com.example.WebApp.main()] [com.example.WebApp] - [CONSOLE] Listed 3 user(s) from the database.
+2026-06-29 11:32:11.517 INFO  [com.example.WebApp.main()] [com.example.WebApp] - === Log4j2 Web Application starting ===
+2026-06-29 11:32:11.525 INFO  [com.example.WebApp.main()] [com.example.DatabaseManager] - Initialising SQLite database at: jdbc:sqlite:logs/users.db
+2026-06-29 11:32:11.660 INFO  [com.example.WebApp.main()] [com.example.DatabaseManager] - Database connection established successfully.
+2026-06-29 11:32:11.665 INFO  [com.example.WebApp.main()] [com.example.DatabaseManager] - Table 'users' is ready (created or already exists).
+2026-06-29 11:32:11.814 INFO  [jetty-server] [com.example.WebApp] - Server started successfully on http://localhost:8080
+2026-06-29 11:33:45.502 INFO  [com.example.WebApp.main()] [com.example.WebApp] - [CONSOLE] Listed 4 user(s) from the database.
+2026-06-29 11:34:25.687 INFO  [com.example.WebApp.main()] [com.example.WebApp] - [CONSOLE] Listed 5 user(s) from the database.
+2026-06-29 11:42:20.963 INFO  [com.example.WebApp.main()] [com.example.WebApp] - === Log4j2 Web Application starting ===
+2026-06-29 11:42:20.968 INFO  [com.example.WebApp.main()] [com.example.DatabaseManager] - Initialising SQLite database at: jdbc:sqlite:logs/users.db
+2026-06-29 11:42:21.091 INFO  [com.example.WebApp.main()] [com.example.DatabaseManager] - Database connection established successfully.
+2026-06-29 11:42:21.096 INFO  [com.example.WebApp.main()] [com.example.DatabaseManager] - Table 'users' is ready (created or already exists).
+2026-06-29 11:42:21.235 INFO  [jetty-server] [com.example.WebApp] - Server started successfully on http://localhost:8080
+2026-06-29 11:43:12.809 INFO  [com.example.WebApp.main()] [com.example.WebApp] - [CONSOLE] Listed 1 user(s) from the database.
+2026-06-29 11:56:12.149 INFO  [com.example.WebApp.main()] [com.example.WebApp] - === Log4j2 Web Application starting ===
+2026-06-29 11:56:12.155 INFO  [com.example.WebApp.main()] [com.example.DatabaseManager] - Initialising SQLite database at: jdbc:sqlite:logs/users.db
+2026-06-29 11:56:12.282 INFO  [com.example.WebApp.main()] [com.example.DatabaseManager] - Database connection established successfully.
+2026-06-29 11:56:12.284 INFO  [com.example.WebApp.main()] [com.example.DatabaseManager] - Table 'users' is ready (created or already exists).
+2026-06-29 11:56:12.432 INFO  [jetty-server] [com.example.WebApp] - Server started successfully on http://localhost:8080
+2026-06-29 11:57:58.128 INFO  [com.example.WebApp.main()] [com.example.WebApp] - Console: exit command received. Stopping server.
+2026-06-29 11:57:58.137 INFO  [com.example.WebApp.main()] [com.example.WebApp] - === Log4j2 Web Application stopped ===
+2026-06-29 12:47:55.600 INFO  [com.example.WebApp.main()] [com.example.WebApp] - === Log4j2 Web Application starting ===
+2026-06-29 12:47:55.605 INFO  [com.example.WebApp.main()] [com.example.DatabaseManager] - Initialising SQLite database at: jdbc:sqlite:logs/users.db
+2026-06-29 12:47:55.729 INFO  [com.example.WebApp.main()] [com.example.DatabaseManager] - Database connection established successfully.
+2026-06-29 12:47:55.732 INFO  [com.example.WebApp.main()] [com.example.DatabaseManager] - Table 'users' is ready (created or already exists).
+2026-06-29 12:47:55.876 INFO  [jetty-server] [com.example.WebApp] - Server started successfully on http://localhost:8080
+2026-06-29 12:48:13.779 INFO  [com.example.WebApp.main()] [com.example.WebApp] - Console: exit command received. Stopping server.
+2026-06-29 12:48:13.789 INFO  [com.example.WebApp.main()] [com.example.WebApp] - === Log4j2 Web Application stopped ===

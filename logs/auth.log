@@ -1,0 +1,40 @@
+2026-06-29 11:16:02.590 INFO  [AUTH] [com.example.UserService] - [REGISTER] Attempting to register new user — username='testuser', email='test@example.com'
+2026-06-29 11:16:02.600 INFO  [AUTH] [com.example.UserService] - [REGISTER] SUCCESS — User 'testuser' registered successfully. Record saved to database.
+2026-06-29 11:16:37.014 INFO  [AUTH] [com.example.UserService] - [LOGIN] Login attempt received for username='testuser'
+2026-06-29 11:16:37.017 INFO  [AUTH] [com.example.UserService] - [LOGIN] SUCCESS — User 'testuser' authenticated successfully. Session may now be established.
+2026-06-29 11:17:21.517 INFO  [AUTH] [com.example.UserService] - [LOGIN] Login attempt received for username='testuser'
+2026-06-29 11:17:21.518 WARN  [AUTH] [com.example.UserService] - [LOGIN] FAILED — Authentication failed for username='testuser'. Possible causes: wrong password or username does not exist. Repeated failures may indicate a brute-force attempt.
+2026-06-29 11:21:50.501 INFO  [AUTH] [com.example.UserService] - [REGISTER] Attempting to register new user — username='Nithishh', email='nithishhcm7@gmail.com'
+2026-06-29 11:21:50.507 INFO  [AUTH] [com.example.UserService] - [REGISTER] SUCCESS — User 'Nithishh' registered successfully. Record saved to database.
+2026-06-29 11:21:59.141 INFO  [AUTH] [com.example.UserService] - [LOGIN] Login attempt received for username='Nithishh'
+2026-06-29 11:21:59.142 INFO  [AUTH] [com.example.UserService] - [LOGIN] SUCCESS — User 'Nithishh' authenticated successfully. Session may now be established.
+2026-06-29 11:22:08.741 INFO  [AUTH] [com.example.UserService] - [LOGIN] Login attempt received for username='Nithishh'
+2026-06-29 11:22:08.742 WARN  [AUTH] [com.example.UserService] - [LOGIN] FAILED — Authentication failed for username='Nithishh'. Possible causes: wrong password or username does not exist. Repeated failures may indicate a brute-force attempt.
+2026-06-29 11:24:36.240 INFO  [AUTH] [com.example.UserService] - [REGISTER] Attempting to register new user — username='consoleuser', email='consoleuser@test.com'
+2026-06-29 11:24:36.248 INFO  [AUTH] [com.example.UserService] - [REGISTER] SUCCESS — User 'consoleuser' registered successfully. Record saved to database.
+2026-06-29 11:24:41.015 INFO  [AUTH] [com.example.UserService] - [LOGIN] Login attempt received for username='consoleuser'
+2026-06-29 11:24:41.017 INFO  [AUTH] [com.example.UserService] - [LOGIN] SUCCESS — User 'consoleuser' authenticated successfully. Session may now be established.
+2026-06-29 11:32:39.206 INFO  [AUTH] [com.example.UserService] - [REGISTER] Attempting — username='raven', email='nithishh2007@gmail.com'
+2026-06-29 11:32:39.227 INFO  [AUTH] [com.example.UserService] - [REGISTER] SUCCESS — User 'raven' registered.
+2026-06-29 11:32:50.115 INFO  [AUTH] [com.example.UserService] - [LOGIN] Attempt — username='awspec'
+2026-06-29 11:32:50.120 WARN  [AUTH] [com.example.UserService] - [LOGIN] FAILED — bad credentials for username='awspec'.
+2026-06-29 11:32:55.224 INFO  [AUTH] [com.example.UserService] - [LOGIN] Attempt — username='awspec'
+2026-06-29 11:32:55.229 WARN  [AUTH] [com.example.UserService] - [LOGIN] FAILED — bad credentials for username='awspec'.
+2026-06-29 11:33:06.002 INFO  [AUTH] [com.example.UserService] - [LOGIN] Attempt — username='nithishh'
+2026-06-29 11:33:06.007 WARN  [AUTH] [com.example.UserService] - [LOGIN] FAILED — bad credentials for username='nithishh'.
+2026-06-29 11:33:12.577 INFO  [AUTH] [com.example.UserService] - [LOGIN] Attempt — username='Nithishh'
+2026-06-29 11:33:12.584 INFO  [AUTH] [com.example.UserService] - [LOGIN] SUCCESS — 'Nithishh' authenticated.
+2026-06-29 11:34:06.336 INFO  [AUTH] [com.example.UserService] - [REGISTER] Attempting — username='awspec', email='awspec@gmail.com'
+2026-06-29 11:34:06.343 INFO  [AUTH] [com.example.UserService] - [REGISTER] SUCCESS — User 'awspec' registered.
+2026-06-29 11:34:20.647 INFO  [AUTH] [com.example.UserService] - [LOGIN] Attempt — username='awspec'
+2026-06-29 11:34:20.652 INFO  [AUTH] [com.example.UserService] - [LOGIN] SUCCESS — 'awspec' authenticated.
+2026-06-29 11:42:43.129 INFO  [AUTH] [com.example.UserService] - [REGISTER] Attempting — username='rase', email='ease@gmail.com'
+2026-06-29 11:42:43.150 INFO  [AUTH] [com.example.UserService] - [REGISTER] SUCCESS — User 'rase' registered.
+2026-06-29 11:56:35.509 INFO  [AUTH] [com.example.UserService] - [REGISTER] Attempting — username='nithishh', email='nithishhcm7@gmail.com'
+2026-06-29 11:56:35.526 INFO  [AUTH] [com.example.UserService] - [REGISTER] SUCCESS — User 'nithishh' registered.
+2026-06-29 11:56:49.858 INFO  [AUTH] [com.example.UserService] - [LOGIN] Attempt — username='nithishh'
+2026-06-29 11:56:49.865 INFO  [AUTH] [com.example.UserService] - [LOGIN] SUCCESS — 'nithishh' authenticated.
+2026-06-29 11:57:24.235 INFO  [AUTH] [com.example.UserService] - [REGISTER] Attempting — username='reena', email='reena@gmail.com'
+2026-06-29 11:57:24.243 INFO  [AUTH] [com.example.UserService] - [REGISTER] SUCCESS — User 'reena' registered.
+2026-06-29 11:57:50.414 INFO  [AUTH] [com.example.UserService] - [REGISTER] Attempting — username='reena', email='reena@gmail.com'
+2026-06-29 11:57:50.418 WARN  [AUTH] [com.example.UserService] - [REGISTER] DUPLICATE — username='reena' already exists.

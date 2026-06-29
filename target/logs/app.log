@@ -1,0 +1,30 @@
+2026-06-29 09:53:47.764 INFO  [com.example.App] - INFO: Application started successfully.
+2026-06-29 09:53:47.766 WARN  [com.example.App] - WARN: Config file not found — falling back to default settings.
+2026-06-29 09:53:47.767 ERROR [com.example.App] - ERROR: Failed to connect to remote service. Will retry in 5 seconds.
+2026-06-29 09:53:47.767 FATAL [com.example.App] - FATAL: Out of memory — shutting down immediately.
+2026-06-29 09:53:47.768 ERROR [com.example.App] - Caught an ArithmeticException while dividing numbers.
+java.lang.ArithmeticException: / by zero
+	at com.example.App.divide(App.java:130)
+	at com.example.App.main(App.java:91)
+2026-06-29 09:53:47.775 INFO  [com.example.App] - User 'Alice' (id=42) logged in successfully.
+2026-06-29 09:53:47.776 INFO  [com.example.App] - Application shutting down. Goodbye!
+2026-06-29 09:59:19.672 INFO  [com.example.App] - INFO: Application started successfully.
+2026-06-29 09:59:19.675 WARN  [com.example.App] - WARN: Config file not found — falling back to default settings.
+2026-06-29 09:59:19.675 ERROR [com.example.App] - ERROR: Failed to connect to remote service. Will retry in 5 seconds.
+2026-06-29 09:59:19.676 FATAL [com.example.App] - FATAL: Out of memory — shutting down immediately.
+2026-06-29 09:59:19.676 ERROR [com.example.App] - Caught an ArithmeticException while dividing numbers.
+java.lang.ArithmeticException: / by zero
+	at com.example.App.divide(App.java:130)
+	at com.example.App.main(App.java:91)
+2026-06-29 09:59:19.684 INFO  [com.example.App] - User 'Alice' (id=42) logged in successfully.
+2026-06-29 09:59:19.684 INFO  [com.example.App] - Application shutting down. Goodbye!
+2026-06-29 09:59:48.803 INFO  [com.example.App] - INFO: Application started successfully.
+2026-06-29 09:59:48.805 WARN  [com.example.App] - WARN: Config file not found — falling back to default settings.
+2026-06-29 09:59:48.806 ERROR [com.example.App] - ERROR: Failed to connect to remote service. Will retry in 5 seconds.
+2026-06-29 09:59:48.806 FATAL [com.example.App] - FATAL: Out of memory — shutting down immediately.
+2026-06-29 09:59:48.806 ERROR [com.example.App] - Caught an ArithmeticException while dividing numbers.
+java.lang.ArithmeticException: / by zero
+	at com.example.App.divide(App.java:130)
+	at com.example.App.main(App.java:91)
+2026-06-29 09:59:48.814 INFO  [com.example.App] - User 'Alice' (id=42) logged in successfully.
+2026-06-29 09:59:48.814 INFO  [com.example.App] - Application shutting down. Goodbye!

@@ -1,0 +1,12 @@
+com\example\UserService.class
+com\example\EventService.class
+com\example\RegisterServlet.class
+com\example\WebApp.class
+com\example\RegisterServlet$1.class
+com\example\LoginServlet.class
+com\example\UserService$RegisterResult.class
+com\example\UserService$LoginResult.class
+com\example\App.class
+com\example\LoginServlet$1.class
+com\example\WebApp$1.class
+com\example\DatabaseManager.class
