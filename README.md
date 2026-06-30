@@ -8,6 +8,24 @@
 LogShield-Servlet is a lightweight, high-performance Java Servlet web application demonstrating a zero-install deployment architecture. This project showcases a premium dark glassmorphism user authentication portal backed by an embedded SQLite database, running an internal Jetty servlet container, and utilizing advanced Apache Log4j2 audit log isolation to split operational telemetry from security footprints.
 
 ---
+## CONSOLE START
+<img width="1907" height="862" alt="image" src="https://github.com/user-attachments/assets/b30c1ea7-abfb-412b-b67b-19ccc4bd213e" />
+
+## WEB SERVER
+<img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/e579d124-2b42-41cf-b40e-5b7c16418ebc" />
+
+## CONSOLE LOG
+<img width="1162" height="1037" alt="image" src="https://github.com/user-attachments/assets/dd34f7a8-bee1-4890-b462-773d0926d63d" />
+
+## CONSOLE CONTROL
+<img width="1132" height="1007" alt="image" src="https://github.com/user-attachments/assets/f7dc3704-c766-4142-ad7a-e1fc183401cf" />
+
+## LOG FILE
+<img width="1918" height="1007" alt="image" src="https://github.com/user-attachments/assets/50ada0d1-384c-4404-96d7-4ba239029185" />
+
+
+
+
 
 ## 🏗️ System Architecture
 
